@@ -39,7 +39,7 @@ print(resume)
 
 #v2 - Doïna
 
-def analyser_ventes(sales):
+def analyser_ventes(sales): # fonction pour analyser les ventes 
     sales=sales[sales["id"]>0] & sales[sales["montant"]>0]
     sales=sales.sort_values("montant")
 
@@ -65,7 +65,7 @@ def analyser_ventes(sales):
         "Prix_maximum" : float(max),
         "Valeurs_extremes" : outliers_values}
 
-    return resume
+    return resume    # affichage en forme de dictionnaire
 
 resultat = analyser_ventes(sales)
 print(resultat)
